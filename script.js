@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js');
+    navigator.serviceWorker.register('service-worker.js');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,6 +9,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const decryptBtn = document.getElementById("decrypt");
     const output = document.getElementById("output");
     const eyeIcon = document.getElementById('toggle-password');
+
+    if ('connection' in navigator) {
+        const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+        // Check for Wi-Fi connection (this works on mobile networks or on mobile devices)
+        if (connection.effectiveType === "wifi" ||
+            connection.effectiveType === "slow-2g" ||
+            connection.effectiveType === "2g" ||
+            connection.effectiveType === "3g" ||
+            connection.effectiveType === "4g" ||
+            connection.effectiveType === "5g"
+        ) {
+            const warningMessage = document.getElementById('warning-message');
+            warningMessage.style.display = 'block';  // Show the message
+            warningMessage.style.opacity = '1';  // Make it visible
+
+            // Hide the success message after 2 seconds
+            setTimeout(function () {
+                warningMessage.style.opacity = '0';  // Fade out
+                setTimeout(function () {
+                    warningMessage.style.display = 'none';  // Hide it
+                }, 500);  // Delay for opacity transition
+            }, 5000);  // Wait 2 seconds before fading out
+        }
+    }
 
     function updateButtonState() {
         const filled = seed.value.trim() !== "" && password.value.trim() !== "";

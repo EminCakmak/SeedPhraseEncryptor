@@ -12,9 +12,9 @@
 
 <body>
     <div class="container">
-        <h2>SeedPhrase Encryptor</h2>
+        <h2>Encrypt your seedphrase</h2>
         <div class="input-container">
-            <label>Text to encrypt</label>
+            <label>Text to encrypt/decrypt</label>
             <input type="text" id="seed" placeholder="Seed Phrase" />
         </div>
         <div class="input-container">
@@ -34,16 +34,22 @@
     <!-- Description about the app -->
     <div class="description">
         <p>
-            Note: Nothing at all is stored in a database, and no data is read or shared. 
-            <br>The AES encryption process works directly client-side in your device. 
-            <br>No external frameworks or libraries are used, everything is just basic html/css/javascript. 
-            <br>You can find the entire source code for this tool on <a href="https://github.com/your-repo-url" target="_blank">GitHub</a>.
+            Note: Nothing at all is stored in a database, and no data is read or shared.
+            <br>The AES encryption process works directly client-side in your device.
+            <br>No external frameworks or libraries are used, everything is just basic html/css/javascript.
+            <br>You can find the entire source code for this tool on <a
+                href="https://github.com/EminCakmak/SeedPhraseEncryptor" target="_blank">GitHub</a>.
         </p>
     </div>
 
-     <!-- Floating success message -->
-     <div id="success-message" class="success-message" style="display: none;">
+    <!-- Floating success message -->
+    <div id="success-message" class="success-message" style="display: none;">
         Successfully copied to clipboard!
+    </div>
+
+    <!-- Floating warning message -->
+    <div id="warning-message" class="warning-message" style="display: none;">
+        You have Wi-Fi on. I suggest you turn off mobile data before encrypting for more security.
     </div>
 
     <script src="encryption.js"></script>

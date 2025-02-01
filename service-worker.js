@@ -5,8 +5,11 @@ var urlsToCache = [
   'style.css',
   'script.js',
   'encryption.js',
-  'icon-152x152.png',
+  'apple-touch-icon.png',
+  'icon-192x192.png',
   'icon-512x512.png',
+  'favicon-96x96.png',
+  'favicon.svg',
   'favicon.ico'
 ];
 
@@ -14,7 +17,6 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function (cache) {
-        console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
   );
