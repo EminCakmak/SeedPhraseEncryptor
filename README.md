@@ -28,15 +28,15 @@ This tool allows you to:
 ## Usage
 
 1. **Encrypt your seed phrase**:
-   - Enter your seed phrase in the "Seed Phrase" field.
+   - Enter your seed phrase in the first input field.
    - Enter a password that only you know (this will be used to encrypt the seed phrase).
    - Press the "Encrypt" button to generate the encrypted seed phrase.
    - The encrypted phrase can then be written on your NFC cards or any other backup method.
 
 2. **Decrypt your seed phrase**:
-   - Enter the encrypted seed phrase in the "Encrypted/Decrypted output" field.
+   - Enter the encrypted seed phrase in the first input field.
    - Enter the same password you used for encryption.
-   - Press the "Decrypt" button to reveal the original seed phrase.
+   - Press the "Decrypt" button to reveal the original text.
 
 ## Important Notes
 
@@ -56,13 +56,3 @@ This tool allows you to:
 1. Clone or download this repository to your local machine.
 2. Open the `index.html` file in your browser.
 3. Use the tool to encrypt and decrypt your seed phrase.
-
-### Running on Local Server (Recommended for Service Worker)
-
-To run the service worker functionality locally, you’ll need to serve the files over HTTP using a local server like [http-server](https://www.npmjs.com/package/http-server) or the **Live Server** extension in Visual Studio Code.
-
-### Example of Running a Local Server:
-
-1. Install `http-server` globally using npm:
-   ```bash
-   npm install -g http-server
