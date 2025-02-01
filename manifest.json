@@ -1,0 +1,20 @@
+{
+  "name": "SeedPhrase Encryptor",
+  "short_name": "Encryptor",
+  "description": "Application to encrypt a message with a specified key",
+  "default_locale": "en",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }
+  ],
+  "installs_allowed_from": [
+    "*"
+  ]
+}
