@@ -56,3 +56,9 @@ This tool allows you to:
 1. Clone or download this repository to your local machine.
 2. Open the `index.html` file in your browser.
 3. Use the tool to encrypt and decrypt your seed phrase.
+
+
+## License
+
+This project is not under any license. Do whatever you want with it. idgaf
+
