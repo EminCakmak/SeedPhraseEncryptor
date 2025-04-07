@@ -24,7 +24,7 @@ async function generateKey(password, keyUsage) {
     return window.crypto.subtle.deriveKey(
         {
             name: "PBKDF2",
-            salt: encoder.encode("seedphrase-encryptor-app"),
+            salt: encoder.encode("change-this-to-whatever-you-want"),
             iterations: 100000,
             hash: "SHA-256",
         },
